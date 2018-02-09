@@ -12,7 +12,13 @@ import (
 	"github.com/liughost/Loggergo"
 )
 func main(){
+  //设置初始参数
+  //输出文件名为test.log，输出目录为当前目录的logs目录下
+  //最后一个参数true代表写日志文件的同时输出到标准输出（例如：屏幕），false表示只输出到日志文件
+  Loggergo.SetLog("test.log", "./logs", true)
+  //
   prn := Loggergo.PrintLog
+  //写入日志文件
   prn("日志输出测试：",123)
 }
 ```
